@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/cloud-builders/go:alpine'
+  args: ['build', '-o', 'testjob', 'main.go']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=asia.gcr.io/gke-cluster-1/testjob', '.']
+images: ['asia.gcr.io/gke-cluster-1/testjob']
