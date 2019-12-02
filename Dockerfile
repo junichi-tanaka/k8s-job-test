@@ -1,5 +1,5 @@
 FROM scratch
 
-COPY gopath/bin/testjob /testjob
+COPY testjob /testjob
 
 ENTRYPOINT ["/testjob"]

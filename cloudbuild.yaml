@@ -3,5 +3,5 @@ steps:
   args: ['build', '-o', 'testjob', 'main.go']
   env: ['PROJECT_ROOT=testjob']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=asia.gcr.io/gke-cluster-1/testjob', '.']
-images: ['asia.gcr.io/gke-cluster-1/testjob']
+  args: ['build', '--tag=asia.gcr.io/junsan45/gke-cluster-1/testjob', '.']
+images: ['asia.gcr.io/junsan45/gke-cluster-1/testjob']
