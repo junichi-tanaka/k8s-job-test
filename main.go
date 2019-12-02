@@ -10,10 +10,12 @@ import (
 )
 
 func main() {
+	fmt.Fprintf(os.Stderr, "start job\n")
 	if err := run(); err != nil {
-		fmt.Fprintf(os.Stdout, "failed to execute command: %v\n", err)
+		fmt.Fprintf(os.Stderr, "failed to execute command: %v\n", err)
 		os.Exit(1)
 	}
+	fmt.Fprintf(os.Stderr, "finished job\n")
 }
 
 func run() error {
